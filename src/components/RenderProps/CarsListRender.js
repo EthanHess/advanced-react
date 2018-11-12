@@ -2,7 +2,14 @@ import React, { Component } from "react";
 
 class CarsListRender extends Component {
 	render() {
-		return <div className="car">Cars List Render Component</div>;
+		const { make, model, year, image, mileage } = this.props.data
+		return <div className="car">
+			<h1>{make}</h1>
+			<h2>{model}</h2>
+			<div>{year}</div>
+			<img src={image}/>
+			<div>{mileage}</div>
+		</div>;
 	}
 }
 
